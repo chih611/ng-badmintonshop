@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RacquetListComponent } from './components/racquet-list/racquet-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RacquetListComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

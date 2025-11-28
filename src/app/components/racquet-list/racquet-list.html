@@ -1,0 +1,17 @@
+<div *ngIf="loading">Loading products...</div>
+
+<div class="racquet-list" *ngIf="!loading">
+  <div class="racquet-card" *ngFor="let racquet of racquets" [appHighlight]="racquet.price">
+    <img *ngIf="racquet.image" [src]="racquet.image" alt="{{ racquet.model }}" />
+    <h3>{{ racquet.brand }} - {{ racquet.model }}</h3>
+    <p>{{ racquet.series }}</p>
+    <p>Weight: {{ racquet.weight }}</p>
+    <p>Grip Size: {{ racquet.gripSize }}</p>
+    <p>Balance: {{ racquet.balance }}</p>
+    <p>Flex: {{ racquet.flex }}</p>
+    <p>String Tension: {{ racquet.stringTension }}</p>
+    <p>Description: {{ racquet.description }}</p>
+    <p>Price: {{ racquet.price | priceFormat }}</p>
+    <p *ngIf="racquet.stock === 0" style="color: red">Out of stock</p>
+  </div>
+</div>

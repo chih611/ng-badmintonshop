@@ -1,0 +1,22 @@
+.racquet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.racquet-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.racquet-card:hover {
+  transform: scale(1.05);
+}
+
+.racquet-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
